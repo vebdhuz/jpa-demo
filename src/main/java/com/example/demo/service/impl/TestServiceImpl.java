@@ -17,12 +17,13 @@ public class TestServiceImpl implements TestService {
   public ArticleRepository articleRepository;
 
   @Override
-  @MyTestAnnotation(value="123124")
+  @MyTestAnnotation(value="test")
   public String Hello(String input) {
     return input + ":abc";
   }
 
   @Override
+  @MyTestAnnotation(value="Article")
   public Optional<Article> GetArticle() {
     long id = 1;
     return articleRepository.findById(id);

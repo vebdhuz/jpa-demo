@@ -1,4 +1,7 @@
 spring:
+  sql:
+    init:
+      mode: never
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://192.168.2.167:3306/test
@@ -8,4 +11,8 @@ spring:
     properties:
       hibernate:
         hbm2ddl: 
-          auto: create
+          auto: update
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
